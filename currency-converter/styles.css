@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --black: #131418;
+  --black2: #1b1e25;
+  --black3: #2c3039;
+  --green: #0ebd95;
+  --white: #edeeef;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 500px;
+  margin: 0 20px;
+  background-color: var(--black2);
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 5px var(--black3);
+  position: relative;
+}
+
+@media (max-width: 500px) {
+  .container {
+    width: 100%;
+  }
+}
+
+h1 {
+  text-align: center;
+  color: var(--green);
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--white);
+}
+
+input[type="number"],
+select {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  font-size: 16px;
+  background-color: #2c3039;
+  caret-color: var(--green);
+  color: var(--white);
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  background-color: var(--green);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s linear;
+}
+
+button:hover {
+  color: var(--green);
+}
+
+button::after {
+  content: "";
+  background-color: var(--white);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  width: 0%;
+  height: 100%;
+  transition: 0.3s linear;
+}
+
+button:hover::after {
+  content: "Convert";
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

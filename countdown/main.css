@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --black: #131418;
+  --black2: #1b1e25;
+  --black3: #2c3039;
+  --green: #0ebd95;
+  --white: #edeeef;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.timer-container {
+  text-align: center;
+  background-color: var(--black2);
+  padding: 15px;
+}
+h1 {
+  color: var(--green);
+}
+.timer-box {
+  color: #fff;
+  background-color: var(--black3);
+
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  width: 100px;
+  display: inline-block;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+.timer-box span {
+  color: var(--green);
+}
+
+@media (max-width: 500px) {
+  .timer-box {
+    width: 300px;
+    padding: 25px;
+  }
+}
+
+.timer-label {
+  display: block;
+  font-size: 14px;
+  margin-top: 5px;
+  color: #ccc;
+}
+
+#timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 500px) {
+  #timer {
+    flex-direction: column;
+  }
+}
+label {
+  color: var(--white);
+  align-self: baseline;
+}
+
+.input-container {
+  margin: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  gap: 10px;
+}
+
+input[type="datetime-local"] {
+  padding: 15px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-size: 16px;
+  width: 100%;
+  background-color: var(--black3);
+  color: var(--white);
+}
+.count input[type="datetime-local"]:focus {
+  border: 1px dashed #4caf50;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: var(--green);
+  color: var(--white);
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  overflow: hidden;
+  transition: 0.3s linear;
+}
+
+button:hover {
+  font-weight: 700;
+  font-size: larger;
+  /* font-size: x-large; */
+  color: var(--black3);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+#modal-message {
+  color: var(--green);
+}
+
+.modal-content {
+  background-color: var(--black2);
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 24%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}

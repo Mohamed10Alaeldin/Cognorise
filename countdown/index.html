@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countdown Timer</title>
+    <link rel="stylesheet" href="main.css" />
+    <script
+      src="https://kit.fontawesome.com/188222cb55.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="timer-container">
+      <h1>Countdown Timer <i class="fa-regular fa-hourglass-half"></i></h1>
+      <div id="timer">
+        <div id="days" class="timer-box">
+          <span id="days-value">00</span>
+          <span class="timer-label">Days</span>
+        </div>
+        <div id="hours" class="timer-box">
+          <span id="hours-value">00</span>
+          <span class="timer-label">Hours</span>
+        </div>
+        <div id="minutes" class="timer-box">
+          <span id="minutes-value">00</span>
+          <span class="timer-label">Minutes</span>
+        </div>
+        <div id="seconds" class="timer-box">
+          <span id="seconds-value">00</span>
+          <span class="timer-label">Seconds</span>
+        </div>
+      </div>
+      <div class="input-container">
+        <label for="countdown-date">Set Countdown Date & Time:</label>
+        <input type="datetime-local" id="countdown-date" />
+        <button id="start-countdown">Start Countdown</button>
+      </div>
+    </div>
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="modal-message"></p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
